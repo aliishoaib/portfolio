@@ -54,6 +54,67 @@
 @media (max-width: 991px) {
     .hexagon-frame { width: 300px; height: 300px; }
 }
+
+/* ── Mobile responsiveness ─────────────────────── */
+@media (max-width: 767px) {
+    /* Reduce hero top padding for mobile navbar height */
+    .section-hero-2.pt-130 { padding-top: 90px; }
+
+    /* Smaller hexagon on phones */
+    .hexagon-frame { width: 220px; height: 220px; }
+
+    /* Scale down the large 50px heading in hero */
+    .fs-50 { font-size: 32px !important; }
+
+    /* Git journaling: allow long project names to wrap */
+    .section-coporation .col-lg-4 .text-dark {
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* Navbar: prevent overflow from right-side spacing */
+    .navbar.navbar-home-2 .navbar-social { margin-right: 0 !important; padding-right: 0 !important; }
+    .dark-light-switcher { padding-right: 0.5rem !important; padding-left: 0.5rem !important; }
+
+    /* Project cards: stack image above text */
+    .section-projects-2 .swiper-slide .row { flex-direction: column; }
+    .section-projects-2 .swiper-slide .col-lg-5,
+    .section-projects-2 .swiper-slide .col-lg-7 { width: 100%; }
+    .section-projects-2 .swiper-slide img { height: 220px !important; }
+
+    /* Experience: stack company list above details */
+    .section-experience .col-lg-4,
+    .section-experience .col-lg-8 { width: 100%; }
+    .section-experience .col-lg-8 { padding-left: 0 !important; }
+
+    /* Contact: reduce padding */
+    .section-contact-2 .col-lg-5 { padding-top: 1.5rem; }
+
+    /* Keep project info rows readable on narrow screens */
+    .section-projects-2 .d-flex.justify-content-between { flex-wrap: wrap; gap: 0.25rem; }
+    .section-projects-2 .d-flex.justify-content-between p { text-align: left !important; }
+}
+
+@media (max-width: 480px) {
+    /* Even smaller hexagon on very small phones */
+    .hexagon-frame { width: 180px; height: 180px; }
+
+    /* Hero heading */
+    .fs-50 { font-size: 28px !important; }
+
+    /* Reduce hero padding further */
+    .section-hero-2.pt-130 { padding-top: 80px; }
+
+    /* Service cards: full width on small phones */
+    .section-service-2 .col-md-6 { width: 100%; }
+
+    /* Typewriter: tighten spacing so full name fits on one line */
+    .typewriter h1 {
+        letter-spacing: 0.04em;
+        font-size: 0.8rem;
+    }
+}
 </style>
     </head>
     <body class="home-page-2">
@@ -150,7 +211,7 @@
 
         <div class="contact-list">
             <p class="text-400 fs-5 mb-2">Social</p>
-            <div class="d-md-flex d-none gap-3">
+            <div class="d-flex gap-3">
                 <a href="https://www.linkedin.com/in/aliishoaib/" target="_blank">
                     <i class="ri-linkedin-fill fs-18"></i>
                 </a>
@@ -180,28 +241,17 @@
                 <div class="mobile-menu-wrap mobile-header-border">
                     <nav>
                         <ul class="mobile-menu font-heading ps-0">
-                            <li class="nav-item has-children">
-                                <a class="nav-link active" href="#">Home</a>
-                                <ul class="sub-menu">
-                                    <li><a href="index.html">Landing page</a></li>
-                                    <li><a href="index-1.html">Home 1 - Designer</a></li>
-                                    <li><a href="index-2.html">Home 2 - Developer</a></li>
-                                    <li><a href="index-3.html">Home 3 - Author</a></li>
-                                </ul>
-                            </li>
-
                             <li class="nav-item">
-                                <a class="nav-link" href="services.html">Services</a>
+                                <a class="nav-link active" href="#about">About me</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="work.html">Portfolio</a>
+                                <a class="nav-link" href="#resume">Resume</a>
                             </li>
-
                             <li class="nav-item">
-                                <a class="nav-link" href="pricing.html">Pricing</a>
+                                <a class="nav-link" href="#services">Services</a>
                             </li>
-
                             <li class="nav-item">
+                                <a class="nav-link" href="#portfolio">Portfolio</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#contact">Contact</a>
@@ -243,7 +293,7 @@
                             <div class="text-secondary-2 d-flex align-items-center">
                                 &lt;span&gt;
                                 <div class="text-dark">
-                                    <div class="typewriter"><h1 class="fs-6 fw-medium">Hey, I’m Mohammad Ali Shoaib</h1></div>
+                                    <div class="typewriter"><h1 class="fs-6 fw-medium">Hey, I’m Ali Shoaib</h1></div>
                                 </div>
                                 &lt;/span&gt;
                             </div>
